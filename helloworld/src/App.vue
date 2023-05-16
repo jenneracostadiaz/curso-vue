@@ -1,7 +1,15 @@
 <template>
-	<h1>HOLA MUNDO</h1>
+	<h1>Lista de Posts</h1>
+
+	<CounterComposition />
 </template>
 
-<script lang="ts"></script>
+<script lang="ts" setup>
+import CounterComposition from './components/CounterComposition.vue';
+</script>
 
-<style></style>
+<style>
+h1 {
+	color: green;
+}
+</style>
