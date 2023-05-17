@@ -1,11 +1,9 @@
 <template>
-	<h1>Lista de Posts</h1>
-
-	<CounterComposition />
+	<ClassBind />
 </template>
 
 <script lang="ts" setup>
-import CounterComposition from './components/CounterComposition.vue';
+import ClassBind from './components/ClassBind.vue';
 </script>
 
 <style>
