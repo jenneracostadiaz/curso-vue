@@ -1,7 +1,16 @@
 <template>
-	<h1>Hola</h1>
+	<TeacherForm />
 </template>
 
-<script lang="ts"></script>
+<script lang="ts" setup>
+import TeacherForm from './components/TeacherForm.vue';
+</script>
 
-<style></style>
+<style>
+body {
+	margin: 0 auto;
+	padding: 0;
+	width: 90%;
+	max-width: 90vw;
+}
+</style>
