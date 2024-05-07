@@ -1,0 +1,67 @@
+[hidden] {
+	display: none;
+}
+
+[type='checkbox'],
+[type='radio'] {
+	box-sizing: border-box;
+	padding: 0;
+}
+
+[type='number']::-webkit-inner-spin-button,
+[type='number']::-webkit-outer-spin-button {
+	height: auto;
+}
+
+[type='search'] {
+	-webkit-appearance: textfield;
+	outline-offset: -2px;
+}
+
+[type='search']::-webkit-search-decoration {
+	-webkit-appearance: none;
+}
+
+::-webkit-file-upload-button {
+	-webkit-appearance: button;
+	font: inherit;
+}
+
+@mixin inputs-standart {
+	input[type='text'],
+	input[type='email'],
+	input[type='password'],
+	input[type='datetime'],
+	input[type='datetime-local'],
+	input[type='date'],
+	input[type='month'],
+	input[type='time'],
+	input[type='week'],
+	input[type='number'],
+	input[type='email'],
+	input[type='url'],
+	input[type='search'],
+	input[type='tel'],
+	input[type='color'],
+	input[type='submit'],
+	select,
+	textarea {
+		@content;
+	}
+}
+
+@include inputs-standart() {
+	@include body-Regular;
+	padding: 1.5rem 2rem;
+	border: 0.1rem solid rgba($cGray_dark, 0.15);
+	background-color: rgba($cBlack_dark, 0.15);
+	color: $cWhite;
+	border: 0.1rem solid rgba($cGray_dark, 0.15);
+	&:hover {
+		border-color: rgba($cGreen, 1);
+	}
+	&:focus {
+		border-color: rgba($cGreen, 1);
+		outline: 0.2rem solid rgba($cGreen, 0.5);
+	}
+}

@@ -1,0 +1,15 @@
+@mixin hiperlink($normal, $hover) {
+	color: $normal;
+	text-decoration: none;
+	fill: $normal;
+	&:hover {
+		color: $hover;
+		fill: $hover;
+		cursor: pointer;
+		text-decoration: none;
+	}
+}
+
+a {
+	@include hiperlink($cWhite, $cGreen);
+}

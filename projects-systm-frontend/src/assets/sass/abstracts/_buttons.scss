@@ -1,0 +1,43 @@
+@mixin button($color, $bg) {
+	color: $color;
+	background-color: $bg;
+	border: none;
+	padding: 2rem;
+	text-transform: uppercase;
+	font-size: 1.6rem;
+	font-weight: 400;
+	border-radius: 1rem;
+	@include hiperlink($color, $bg);
+	&:hover {
+		background-color: rgba($bg, 0.9);
+		color: $color;
+		box-shadow: 0.25rem 0.25rem 2rem rgba($bg, 0.25);
+	}
+	&:focus {
+		outline: 0.25rem solid $bg;
+	}
+}
+
+@mixin button_two($color, $bg, $border) {
+	@include body-Regular;
+	display: block;
+	width: 100%;
+	padding: 2rem;
+	text-align: center;
+	text-transform: uppercase;
+	background-color: $bg;
+	transition: background-position 0.3s ease;
+	background-size: 200% auto;
+	background-image: linear-gradient(
+		to right,
+		transparent 50%,
+		$border 50%
+	);
+	&:hover {
+		background-position: -100% 0;
+		color: $bg;
+	}
+	&:focus {
+		outline: 0.25rem solid $border;
+	}
+}

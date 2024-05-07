@@ -1,0 +1,189 @@
+$ffTitle: 'Roboto';
+$ffBody: 'Roboto';
+
+@mixin title-settings(
+	$font,
+	$weight,
+	$size,
+	$line-height,
+	$margin: 0
+) {
+	font-family: $font;
+	font-optical-sizing: auto;
+	font-style: normal;
+	font-weight: $weight;
+	font-size: $size;
+	line-height: $line-height;
+	margin: $margin;
+	@if $font == $ffTitle {
+		font-variation-settings: 'wdth' 100;
+	} @else {
+		font-variation-settings: 'slnt' 0;
+	}
+}
+
+@mixin title-L {
+	@include title-settings(
+		$ffTitle,
+		600,
+		30px,
+		28px,
+		0.77em 0
+	);
+}
+
+@mixin H0-SemiBold70 {
+	@include title-settings(
+		$ffTitle,
+		600,
+		70px,
+		68px,
+		0.77em 0
+	);
+}
+
+@mixin H0-Regular70 {
+	@include title-settings(
+		$ffTitle,
+		400,
+		70px,
+		68px,
+		0.77em 0
+	);
+}
+
+@mixin H1-SemiBold50 {
+	@include title-settings(
+		$ffTitle,
+		600,
+		50px,
+		48px,
+		0.77em 0
+	);
+}
+
+@mixin H1-Regular50 {
+	@include title-settings(
+		$ffTitle,
+		400,
+		50px,
+		48px,
+		0.77em 0
+	);
+}
+
+@mixin H2-SemiBold40 {
+	@include title-settings(
+		$ffTitle,
+		600,
+		40px,
+		38px,
+		0.77em 0
+	);
+}
+
+@mixin H2-Regular40 {
+	@include title-settings(
+		$ffTitle,
+		400,
+		40px,
+		38px,
+		0.77em 0
+	);
+}
+
+@mixin H3-SemiBold30 {
+	@include title-settings(
+		$ffTitle,
+		600,
+		30px,
+		28px,
+		0.77em 0
+	);
+}
+
+@mixin H3-Regular30 {
+	@include title-settings(
+		$ffTitle,
+		400,
+		30px,
+		28px,
+		0.77em 0
+	);
+}
+
+@mixin H4-SemiBold24 {
+	@include title-settings(
+		$ffTitle,
+		600,
+		24px,
+		28px,
+		0.77em 0
+	);
+}
+
+@mixin H4-Regular24 {
+	@include title-settings(
+		$ffTitle,
+		400,
+		24px,
+		28px,
+		0.77em 0
+	);
+}
+
+@mixin H5-SemiBold20 {
+	@include title-settings(
+		$ffTitle,
+		600,
+		20px,
+		28px,
+		0.77em 0
+	);
+}
+
+@mixin H5-Regular20 {
+	@include title-settings(
+		$ffTitle,
+		400,
+		20px,
+		28px,
+		0.77em 0
+	);
+}
+
+@mixin body-Regular {
+	@include title-settings($ffBody, 400, 16px, 24px);
+}
+
+@mixin body-SemiBold {
+	@include title-settings($ffBody, 600, 16px, 24px);
+}
+
+@mixin desc-Regular {
+	@include title-settings($ffTitle, 400, 14px, 20px);
+}
+
+@mixin menu-Regular {
+	@include title-settings($ffBody, 400, 12px, 18px);
+}
+
+@mixin title-product {
+	@include title-settings(
+		$ffTitle,
+		700,
+		60px,
+		58px,
+		0.77em 0
+	);
+}
+
+@mixin price-product {
+	@include title-settings(
+		$ffTitle,
+		700,
+		25px,
+		28px,
+		0.77em 0
+	);
+}

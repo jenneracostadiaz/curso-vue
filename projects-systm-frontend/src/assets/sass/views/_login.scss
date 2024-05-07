@@ -1,0 +1,32 @@
+.login {
+	@include container($d-phone);
+	margin-top: 4rem;
+	&__form {
+		display: grid;
+		gap: 3rem;
+		&__title {
+			@include title-L;
+		}
+		&__input {
+			display: grid;
+			gap: 1rem;
+			color: $cGray_light;
+		}
+		&__button {
+			@include button_two(
+				$cBlack_dark,
+				$cGreen,
+				$cBlack_dark
+			);
+		}
+	}
+	&__footer {
+		margin-top: 1rem;
+		a {
+			@include menu-Regular;
+			display: block;
+			text-align: center;
+			padding: 2rem;
+		}
+	}
+}

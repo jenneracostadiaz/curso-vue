@@ -1,0 +1,86 @@
+.main-header {
+	padding: 1rem 0;
+	&__container {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	.brand {
+		color: $cGreen;
+		@include body-SemiBold;
+	}
+}
+
+.nav-main {
+	ul {
+		display: flex;
+		gap: 1rem;
+	}
+	a,
+	button {
+		text-transform: uppercase;
+		@include menu-Regular;
+		color: $cWhite;
+		display: block;
+		border-bottom: 1px solid transparent;
+		&:hover {
+			color: $cGreen;
+			border-color: $cGreen;
+		}
+	}
+	&.current_page_item {
+		a {
+			font-weight: 700;
+		}
+	}
+}
+
+.hamburger-box {
+	width: 30px;
+	height: 24px;
+	display: inline-block;
+	position: relative;
+	.hamburger-inner {
+		width: 100%;
+		height: 2px;
+		background-color: $cBlack;
+		position: absolute;
+		top: 50%;
+		left: 0;
+		transform: translateY(-50%);
+		transition: background-color 0.2s;
+		&::before,
+		&::after {
+			content: '';
+			width: 100%;
+			height: 2px;
+			background-color: $cBlack;
+			position: absolute;
+			left: 0;
+			transition: transform 0.2s, background-color 0.2s;
+		}
+		&::before {
+			top: -8px;
+		}
+		&::after {
+			top: 8px;
+		}
+	}
+}
+
+.cart-icon {
+	display: flex;
+	align-items: center;
+	.cart-count {
+		background-color: $cBrown;
+		color: $cWhite;
+		border-radius: 50%;
+		width: 1.5rem;
+		height: 1.5rem;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		font-size: 1rem;
+		margin-left: 0.5rem;
+	}
+}

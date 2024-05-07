@@ -1,0 +1,7 @@
+@mixin svgicon($wight) {
+	width: $wight;
+	height: $wight;
+}
+.svg-icon {
+	@include svgicon(2rem);
+}

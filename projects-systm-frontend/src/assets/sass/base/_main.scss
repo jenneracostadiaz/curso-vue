@@ -1,0 +1,28 @@
+html {
+	box-sizing: border-box;
+	font-size: 62.5%;
+	-webkit-text-size-adjust: 100%;
+	/* Now 10px = 1rem! */
+}
+
+*,
+*:before,
+*:after {
+	box-sizing: inherit;
+}
+
+* {
+	scroll-behavior: smooth;
+	outline: none;
+}
+
+body {
+	@include body-Regular;
+	background-color: $cBlack;
+	color: $cWhite;
+	margin: 0;
+}
+
+main.default-page {
+	@include container($d-desktop);
+}
